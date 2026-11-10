@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccueilController!{% endblock %}
+
+{% block body %}
+
+<h1>Marques</h1>
+<ul>
+    {% for marque in marques %}
+        <li>{{ marque }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
