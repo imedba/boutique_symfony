@@ -174,7 +174,9 @@ class Produit
 
     public function getQuantiteVendue(): int
     {
+        // On inititalise un integer à 0
         $total = 0;
+        // On boucle sur TOUTES les commandes de CE produit
         foreach($this->commandes as $commande) {
             $total = $total + $commande->getQuantite();
         }

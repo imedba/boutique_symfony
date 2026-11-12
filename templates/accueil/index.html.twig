@@ -42,7 +42,9 @@
 
             {% for produit in produits %}
             <article class="carte">
-                <a href="#" class="carte-image">
+                {# Ci dessous, a chaque produit du catalogue je mets en place le lien de redirection vers la page de détail de chaque produit. #}
+                {# Grace à la methode path, je dis que au clic de la carte produit l'utilisateur sera redirigé vers la route qui s'apelle 'app_produit' (donc /produit/{id}) et l'id en parametre correspond à l'id du produit sur lequel on est #}
+                <a href="{{ path('app_produit', {'id' : produit.id}) }}" class="carte-image">
                     <img src="{{produit.image}}" alt="Adidas Forum Low">
                     {% if produit.stock == 0 %}
                         <span class="badge badge-epuise">Épuisé</span>

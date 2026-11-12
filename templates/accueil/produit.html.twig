@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit{% endblock %}
+
+{% block body %}
+<main class="conteneur">
+
+        <nav class="fil-ariane">
+            <a href="#">Catalogue</a>
+            <span>›</span>
+            <a href="#">{{produit.categorie}}</a>
+            <span>›</span>
+            <span class="fil-actuel">{{ produit.nom }}</span>
+        </nav>
+
+        <section class="detail">
+
+            <div class="detail-image">
+                <img src="{{ produit.image }}" alt="{{ produit.nom }}">
+            </div>
+
+            <div class="detail-infos">
+                <p class="detail-marque">{{ produit.marque }}</p>
+                <h1 class="detail-nom">{{ produit.nom }}</h1>
+                <span class="carte-categorie">{{ produit.categorie }}</span>
+
+                <p class="detail-prix">{{ produit.prix }} €</p>
+
+                <p class="stock stock-ok">En stock</p>
+
+                <div class="detail-achat">
+                    <input type="number" name="quantite" value="1" min="1" class="champ-quantite">
+                    <button type="button" class="bouton bouton-grand">Ajouter au panier</button>
+                </div>
+
+                <ul class="detail-avantages">
+                    <li>Livraison offerte dès 100 €</li>
+                    <li>Retours gratuits sous 30 jours</li>
+                    <li>{{ produit.getQuantiteVendue() }} paires vendues</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="similaires">
+            <h2 class="similaires-titre">Dans la même catégorie</h2>
+
+            <div class="grille">
+                {% for produit in produits_similaire %}
+                <article class="carte">
+                    <a href="#" class="carte-image">
+                        <img src="{{ produit.image }}" alt="{{ produit.nom }}">
+                    </a>
+                    <div class="carte-contenu">
+                        <p class="carte-marque">{{ produit.marque }}</p>
+                        <h2 class="carte-nom">{{ produit.nom }}</h2>
+                        <span class="carte-categorie">{{ produit.categorie }}</span>
+                        <div class="carte-bas">
+                            <span class="carte-prix">{{ produit.prix }} €</span>
+                            <a href="#" class="bouton bouton-petit">Voir</a>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
