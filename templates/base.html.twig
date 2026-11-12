@@ -19,6 +19,21 @@
         {% endif %}
     </head>
     <body>
+        <header class="entete">
+        <div class="conteneur entete-contenu">
+            <a href="#" class="logo">Sneak<span>Shop</span></a>
+            <nav class="menu">
+                <a href="#">Accueil</a>
+                <a href="#" class="actif">Catalogue</a>
+            </nav>
+        </div>
+        </header>
         {% block body %}{% endblock %}
+        <footer class="pied">
+        <div class="conteneur pied-contenu">
+            <span>SneakShop — projet de formation</span>
+            <span>Livraison offerte dès 100 €</span>
+        </div>
+    </footer>
     </body>
 </html>

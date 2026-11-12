@@ -1,13 +1,66 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Catalogue{% endblock %}
 
 {% block body %}
 
-<h1>Marques</h1>
-<ul>
-    {% for marque in marques %}
-        <li>{{ marque }}</li>
-    {% endfor %}
-</ul>
+<main class="conteneur">
+
+        <section class="catalogue-entete">
+            <div>
+                <h1>Catalogue</h1>
+                <p class="compteur">12 modèles</p>
+            </div>
+
+            <form method="get" class="filtres">
+                <select name="categorie">
+                    <option value="">Toutes les catégories</option>
+                    {% for categorie in categories %}
+                    <option value="{{categorie}}">{{ categorie }}</option>
+                    {% endfor %}
+                </select>
+
+                <select name="marque">
+                    <option value="">Toutes les marques</option>
+                    {% for marque in marques %}
+                    <option value="{{marque}}">{{ marque }}</option>
+                    {% endfor %}
+                </select>
+
+                <select name="tri">
+                    <option value="">Trier par marque</option>
+                    <option value="prix_asc">Prix croissant</option>
+                    <option value="prix_desc">Prix décroissant</option>
+                </select>
+
+                <button type="submit" class="bouton">Filtrer</button>
+                <a href="#" class="lien-reset">Réinitialiser</a>
+            </form>
+        </section>
+
+        <section class="grille">
+
+            {% for produit in produits %}
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="{{produit.image}}" alt="Adidas Forum Low">
+                    {% if produit.stock == 0 %}
+                        <span class="badge badge-epuise">Épuisé</span>
+                    {%  endif %}
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">{{produit.marque}}</p>
+                    <h2 class="carte-nom">{{produit.nom}}</h2>
+                    <span class="carte-categorie">{{produit.categorie}}</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">{{produit.prix}} €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+
+        </section>
+
+    </main>
 {% endblock %}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catalogue — SneakShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="entete">
+        <div class="conteneur entete-contenu">
+            <a href="#" class="logo">Sneak<span>Shop</span></a>
+            <nav class="menu">
+                <a href="#">Accueil</a>
+                <a href="#" class="actif">Catalogue</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteneur">
+
+        <section class="catalogue-entete">
+            <div>
+                <h1>Catalogue</h1>
+                <p class="compteur">12 modèles</p>
+            </div>
+
+            <form method="get" class="filtres">
+                <select name="categorie">
+                    <option value="">Toutes les catégories</option>
+                    <option value="Basket">Basket</option>
+                    <option value="Lifestyle">Lifestyle</option>
+                    <option value="Running">Running</option>
+                    <option value="Skate">Skate</option>
+                </select>
+
+                <select name="marque">
+                    <option value="">Toutes les marques</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Asics">Asics</option>
+                    <option value="Converse">Converse</option>
+                    <option value="New Balance">New Balance</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Puma">Puma</option>
+                    <option value="Vans">Vans</option>
+                </select>
+
+                <select name="tri">
+                    <option value="">Trier par marque</option>
+                    <option value="prix_asc">Prix croissant</option>
+                    <option value="prix_desc">Prix décroissant</option>
+                </select>
+
+                <button type="submit" class="bouton">Filtrer</button>
+                <a href="#" class="lien-reset">Réinitialiser</a>
+            </form>
+        </section>
+
+        <section class="grille">
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Adidas+Forum+Low" alt="Adidas Forum Low">
+                    <span class="badge badge-epuise">Épuisé</span>
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Adidas</p>
+                    <h2 class="carte-nom">Forum Low</h2>
+                    <span class="carte-categorie">Basket</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">109,95 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Adidas+Samba+OG" alt="Adidas Samba OG">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Adidas</p>
+                    <h2 class="carte-nom">Samba OG</h2>
+                    <span class="carte-categorie">Lifestyle</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">119,95 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Adidas+Ultraboost+5" alt="Adidas Ultraboost 5">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Adidas</p>
+                    <h2 class="carte-nom">Ultraboost 5</h2>
+                    <span class="carte-categorie">Running</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">189,95 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Asics+Gel-Kayano+14" alt="Asics Gel-Kayano 14">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Asics</p>
+                    <h2 class="carte-nom">Gel-Kayano 14</h2>
+                    <span class="carte-categorie">Running</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">159,90 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Converse+Chuck+70+High" alt="Converse Chuck 70 High">
+                    <span class="badge badge-epuise">Épuisé</span>
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Converse</p>
+                    <h2 class="carte-nom">Chuck 70 High</h2>
+                    <span class="carte-categorie">Lifestyle</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">94,99 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=New+Balance+1906R" alt="New Balance 1906R">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">New Balance</p>
+                    <h2 class="carte-nom">1906R</h2>
+                    <span class="carte-categorie">Running</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">159,99 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=New+Balance+550" alt="New Balance 550">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">New Balance</p>
+                    <h2 class="carte-nom">550</h2>
+                    <span class="carte-categorie">Basket</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">129,99 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Nike+Air+Force+1+%2707" alt="Nike Air Force 1 '07">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Nike</p>
+                    <h2 class="carte-nom">Air Force 1 '07</h2>
+                    <span class="carte-categorie">Lifestyle</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">119,99 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Nike+Air+Max+90" alt="Nike Air Max 90">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Nike</p>
+                    <h2 class="carte-nom">Air Max 90</h2>
+                    <span class="carte-categorie">Lifestyle</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">149,99 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Nike+Pegasus+41" alt="Nike Pegasus 41">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Nike</p>
+                    <h2 class="carte-nom">Pegasus 41</h2>
+                    <span class="carte-categorie">Running</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">139,99 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Puma+Suede+Classic" alt="Puma Suede Classic">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Puma</p>
+                    <h2 class="carte-nom">Suede Classic</h2>
+                    <span class="carte-categorie">Lifestyle</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">84,95 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carte">
+                <a href="#" class="carte-image">
+                    <img src="https://placehold.co/600x400?text=Vans+Old+Skool" alt="Vans Old Skool">
+                </a>
+                <div class="carte-contenu">
+                    <p class="carte-marque">Vans</p>
+                    <h2 class="carte-nom">Old Skool</h2>
+                    <span class="carte-categorie">Skate</span>
+                    <div class="carte-bas">
+                        <span class="carte-prix">79,99 €</span>
+                        <a href="#" class="bouton bouton-petit">Voir</a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="pied">
+        <div class="conteneur pied-contenu">
+            <span>SneakShop — projet de formation</span>
+            <span>Livraison offerte dès 100 €</span>
+        </div>
+    </footer>
+
+</body>
+</html>

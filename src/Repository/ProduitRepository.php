@@ -38,6 +38,22 @@ class ProduitRepository extends ServiceEntityRepository
         return $qb->getQuery()->getResult();
     }
 
+    public function findProduits(): array
+    {
+        // Ci dessous je construit la requete SQL pour récupérer tout les produits
+        $lignes = $this->createQueryBuilder('p')
+        // Le temps de ma requete, p = la table produits
+        ->select('p')
+        // L'ordre de classement se fera dans l'ordre alphabetique des noms des produits
+        ->orderBy('p.nom')
+        // Définis la requete
+        ->getQuery()
+        // Execute et envoie moi le resultat de la requete
+        ->getResult();
+        return array_column($lignes, 'produits');
+
+    }
+
     /** Liste des marques, sans doublon */
     public function findMarques(): array
     {
